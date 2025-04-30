@@ -69,3 +69,20 @@
 @utility btn-secondary-mixed {
   @apply btn text-bg-mixed-secondary hover:bg-brand-secondary-600
 }
+
+/* Seo Text */
+@utility seo-text-section {
+  @apply flex flex-col gap-y-10;
+}
+
+.seo-text-section div {
+  @apply flex flex-col gap-y-8
+}
+
+.seo-text-section h1 {
+  @apply max-w-[700px] mx-auto text-4xl font-bold text-brand-secondary text-center leading-12;
+}
+
+.seo-text-section h2 {
+  @apply text-3xl font-bold text-brand-secondary mb-6;
+}
