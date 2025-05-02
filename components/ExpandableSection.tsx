@@ -26,7 +26,7 @@ export default function ExpandableSection({
   }, [children]);
 
   return (
-    <section className="relative px-cont py-14 border-t border-b border-brand-secondary-100 bg-gray-50">
+    <section className="relative">
       <motion.div
         animate={{
           height: expanded ? contentHeight : collapsedHeight,

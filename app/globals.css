@@ -43,6 +43,7 @@
 @utility text-bg-mixed-primary {
   @apply bg-brand-primary text-brand-secondary-600
 }
+
 @utility text-bg-mixed-secondary {
   @apply bg-brand-secondary text-brand-primary-300
 }
@@ -51,38 +52,66 @@
 @utility btn {
   @apply py-3 px-6 border-2 border-transparent font-bold rounded-lg transition-colors duration-300 flex items-center justify-center cursor-pointer
 }
+
 @utility btn-primary {
   @apply btn bg-brand-primary-400 hover:bg-brand-primary-400/93 text-black
 }
+
 @utility btn-secondary {
   @apply btn bg-brand-secondary hover:bg-brand-secondary-600 text-white
 }
+
 @utility btn-primary-white {
   @apply btn bg-white border border-gray-200 text-brand-primary-600/90 hover:text-brand-primary hover:shadow-lg hover:shadow-white/30
 }
+
 @utility btn-secondary-white {
   @apply btn bg-white text-brand-secondary hover:bg-brand-secondary hover:text-white
 }
+
 @utility btn-primary-mixed {
   @apply btn text-bg-mixed-primary hover:bg-brand-primary-400
 }
+
 @utility btn-secondary-mixed {
   @apply btn text-bg-mixed-secondary hover:bg-brand-secondary-600
 }
 
 /* Seo Text */
 @utility seo-text-section {
-  @apply flex flex-col gap-y-10;
+  @apply relative overflow-y-scroll border-t border-b border-brand-secondary-100 bg-gray-50;
 }
 
-.seo-text-section div {
-  @apply flex flex-col gap-y-8
+/* seo text section scrollbar */
+.seo-text-section::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+.seo-text-section::-webkit-scrollbar-thumb {
+  background-color: transparent
 }
 
-.seo-text-section h1 {
-  @apply max-w-[700px] mx-auto text-4xl font-bold text-brand-secondary text-center leading-12;
+/* hover states */
+.seo-text-section:hover::-webkit-scrollbar {
+  background-color: var(--color-brand-secondary);
+}
+.seo-text-section:hover::-webkit-scrollbar-thumb {
+  background-color: var(--color-brand-primary)
 }
 
-.seo-text-section h2 {
-  @apply text-3xl font-bold text-brand-secondary mb-6;
+.seo-text-section > .seo-text-section__content {
+  @apply px-cont pt-14 space-y-6;
+}
+
+/* seo text Internal elements */
+.seo-text-section > .seo-text-section__content > div {
+  @apply space-y-6;
+}
+
+.seo-text-section > .seo-text-section__content h1 {
+  @apply max-w-[700px] mb-8 mx-auto text-4xl font-bold text-brand-secondary text-center leading-12;
+}
+
+.seo-text-section > .seo-text-section__content h2 {
+  @apply text-3xl font-bold text-brand-secondary mb-5;
 }

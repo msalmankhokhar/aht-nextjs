@@ -5,12 +5,12 @@ interface ArrowProps {
     variant?: 'up' | 'down' | 'left' | 'right'
 }
 
-const rotateClasses = {
-    up: 'rotate-90',
-    down: 'rotate-270',
-    left: 'rotate-180',
-    right: 'rotate-0'
-}
+// const rotateClasses = {
+//     up: 'rotate-90',
+//     down: 'rotate-270',
+//     left: 'rotate-180',
+//     right: 'rotate-0'
+// }
 
 export default function Arrow({ variant }: ArrowProps) {
     return (
@@ -19,7 +19,7 @@ export default function Arrow({ variant }: ArrowProps) {
             src={'/assets/vector/arrow.svg'}
             width={50}
             height={10}
-            className={`${rotateClasses[variant!]} transform h-auto`}
+            className={`${variant === 'down' ? 'rotate-90' : variant === 'left' ? 'rotate-180' : variant === 'up' ? 'rotate-[270deg]' : 'rotate-0' } transform h-auto`}
         />
     )
 }

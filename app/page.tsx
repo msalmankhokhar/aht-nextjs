@@ -34,7 +34,7 @@ export default function Home() {
         {/* Packages Section */}
         <PackagesSection />
 
-        <SeoTextSection collapsedHeight={250}>
+        <SeoTextSection height={330}>
           <h1>Umrah Packages: Experience a Spiritually Rewarding Umrah Journey</h1>
           <div>
             <p>
@@ -53,7 +53,7 @@ export default function Home() {
         <BookingProcessSection />
 
         {/* Umrah Package Types Offered by Al Habib Travel */}
-        <SeoTextSection collapsedHeight={440}>
+        <SeoTextSection height={350}>
           <h1>Umrah Package Types Offered by Al Habib Travel</h1>
           <p>
             To meet the diverse needs and preferences of pilgrims, Al Habib Travel provides a wide selection of Umrah packages for various budgets and travel requirements. Al Habib will present some of the best Umrah Packages 2025, allowing you to decide which best suits your priorities.
@@ -88,7 +88,7 @@ export default function Home() {
         <AccomodationSection />
 
         {/* Why choose Al Habib Travel for Umrah? */}
-        <SeoTextSection collapsedHeight={330}>
+        <SeoTextSection height={330}>
           <h1>Why Choose Al Habib Travel for your Umrah?</h1>
           <div>
             <h2>Affordable Packages</h2>
@@ -156,7 +156,7 @@ export default function Home() {
         <WhyAlHabibSection />
         
         {/* The Significance of Umrah in Islam */}
-        <SeoTextSection>
+        <SeoTextSection height={330}>
           <div>
             <h1>The Significance of Umrah in Islam</h1>
             <p>
@@ -216,7 +216,8 @@ export default function Home() {
         {/* Reviews Sections */}
         <ReviewsSection />
 
-        <SeoTextSection collapsedHeight={250}>
+        {/* Consideration of Senior Citizens, Kids, & Disabled Persons Needs */}
+        <SeoTextSection height={300}>
           <h1>Consideration of Senior Citizens, Kids, & Disabled Persons Needs</h1>
           <p>
           Al Habib Travel believes that Umrah should be accessible and convenient for senior citizens, children, and handicapped persons. Our Umrah packages are designed to suit every kind of traveller because we recognize the diverse needs of various pilgrims. Special services are provided for elderly pilgrims, with provisions for extra assistance, comfortable accommodations, and smooth transportation to and from the Haram. Al Habib Travel offers wheelchair accessibility services, priority service, and guided assistance to make the whole journey easier for you.
@@ -232,7 +233,8 @@ export default function Home() {
         {/* Our Partners Section */}
         <PartnersSection />
 
-        <SeoTextSection collapsedHeight={290}>
+        {/* Plan your Umrah with Al-Habib Travels Now! */}
+        <SeoTextSection height={340}>
           <h1>Plan your Umrah with Al-Habib Travels Now!</h1>
           <p>
           A dream for many, Umrah is now made possible with Al-Habib Travels, which means that our commitment to wholesome service at prices you can afford is to ensure that you&apos;re comfortable during this pilgrimage and that it is rewarding and spiritually uplifting.

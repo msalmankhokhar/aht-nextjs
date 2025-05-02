@@ -1,4 +1,5 @@
 import React from 'react'
+import Arrow from '../Arrow'
 
 const data = [
     {
@@ -37,22 +38,62 @@ export default function BookingProcessSection() {
     return (
         <div className="py-10 px-cont">
             <h1 className="text-3xl font-bold text-brand-secondary mb-12 text-center">Our Booking <span className="text-brand-primary">Process</span></h1>
-            <div className="flex gap-5 flex-wrap justify-center">
-
-                {/* Booking process cards */}
-
-                {data.map((item) => (
-                    <div key={item.step} className="max-w-[280px] rounded-xl shadow-md shadow-brand-secondary-300/40 border border-brand-secondary-100 p-6 flex flex-col items-center">
-                        <div className="bg-brand-secondary size-[45px] rounded-full flex items-center justify-center font-bold text-lg text-white mb-8">
-                            <span>{item.step}</span>
+            
+            {/* Main container with grid for larger screens and column for mobile */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-5 max-w-6xl mx-auto">
+                
+                {data.map((item, index) => (
+                    <div key={index} className="relative flex flex-col items-center">
+                        {/* Step card */}
+                        <div className="w-full max-w-[280px] rounded-xl shadow-md shadow-brand-secondary-300/40 border border-brand-secondary-100 p-6 flex flex-col items-center bg-white">
+                            <div className="bg-brand-secondary size-[45px] rounded-full flex items-center justify-center font-bold text-lg text-white mb-8">
+                                <span>{item.step}</span>
+                            </div>
+                            <h2 className="text-center text-base font-semibold text-brand-secondary mb-3">{item.title}</h2>
+                            <p className="text-brand-secondary-600 text-sm text-center">
+                                {item.description}
+                            </p>
                         </div>
-                        <h2 className="text-center text-lg font-semibold text-brand-secondary mb-3">{item.title}</h2>
-                        <p className="text-brand-secondary-600 text-sm text-center">
-                            {item.description}
-                        </p>
+
+                        {/* Arrow pointing to next step - don't show after last item or at the end of a row */}
+                        {index < data.length - 1 && (
+                            <>
+                                {/* Right arrow for end of row items on large screens */}
+                                {(index + 1) % 3 !== 0 && (
+                                    <div className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10">
+                                        <Arrow variant='right' />
+                                    </div>
+                                )}
+                                
+                                {/* Right arrow for medium screens, 2 columns */}
+                                {(index + 1) % 2 !== 0 && (
+                                    <div className="hidden sm:flex lg:hidden absolute -right-4 top-1/2 -translate-y-1/2 z-10">
+                                        <Arrow variant='right' />
+                                    </div>
+                                )}
+                                
+                                {/* Down arrow for end of row items */}
+                                {/* {((index + 1) % 3 === 0 && index < data.length - 1) && (
+                                    <div className="hidden lg:flex justify-center my-2">
+                                        <Arrow variant='down' />
+                                    </div>
+                                )} */}
+                                
+                                {/* Down arrow for medium screens at end of rows */}
+                                {/* {((index + 1) % 2 === 0 && index < data.length - 1) && (
+                                    <div className="hidden sm:flex lg:hidden justify-center my-2">
+                                        <Arrow variant='down' />
+                                    </div>
+                                )} */}
+                                
+                                {/* Down arrow for mobile - after every item except last */}
+                                <div className="flex sm:hidden justify-center my-2">
+                                    <Arrow variant='down' />
+                                </div>
+                            </>
+                        )}
                     </div>
                 ))}
-
             </div>
         </div>
     )
