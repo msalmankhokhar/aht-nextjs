@@ -29,7 +29,7 @@ const data = [
     },
     {
         step: 6,
-        title: " Embark on Your Umrah Journey",
+        title: " Embark on Your Journey",
         description: "Travel stress-free & experience a smooth pilgrimage.",
     },
 ]

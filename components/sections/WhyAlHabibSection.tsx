@@ -1,6 +1,5 @@
 import React from 'react'
 import WhyAHTCard from '../WhyAHTCard'
-import { LuPhone } from 'react-icons/lu'
 import BgPattern from '../BgPattern'
 
 export default function WhyAlHabibSection() {
@@ -13,21 +12,17 @@ export default function WhyAlHabibSection() {
                     <div className="gradient-brand-teal bg-gradient-to-t to-brand-secondary-400 w-full h-[70%] top-[15%] absolute">
                         <BgPattern />
                     </div>
-                    <div className="px-cont flex gap-8 justify-center items-center">
-
-                        {/* Why Al Habib Travel */}
-
+                    <div className="px-cont flex gap-5 justify-center">
                         <WhyAHTCard
                             heading="Welcome to Superb Umrah Package"
                             description="Al Habib Travel is a reowned company
-                        in thefield of Umrah travels. We organize
+                        in the field of Umrah travels. We organize
                         Umrah tours for potential pilgrims meeting international standards. Our Umrah Packages are inclusive and cater the needs of all types of Pilgrims."
                             imagePath="/images/why_alhabib/makkah_city_1.png"
                             extra={
-                                <button type="button" className="btn-secondary-mixed min-w-[180px] space-x-2 mt-5 font-semibold">
-                                    <LuPhone />
-                                    <span>Call Now</span>
-                                </button>
+                                <p className="font-semibold text-brand-secondary text-sm mt-5">
+                                    For more info call us at: 0123 456 789
+                                </p>
                             }
                         />
                         <WhyAHTCard
@@ -40,7 +35,6 @@ export default function WhyAlHabibSection() {
                             description="Al Habib Travel offers Umrah Packages with best services fulfil your Umrah aspirations as per your budget, comfort, convenience and other requirements."
                             imagePath="/images/why_alhabib/makkah_city_3.png"
                         />
-
                     </div>
                 </div>
             </div>

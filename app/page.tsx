@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import AccomodationSection from "@/components/sections/AccomodationSection";
 import BookingProcessSection from "@/components/sections/BookingProcessSection";
+import EconomyPackagesSection from "@/components/sections/EconomyPackagesSection";
 import FaqsSection from "@/components/sections/FaqsSection";
 import HomeHeroSection from "@/components/sections/HomeHeroSection";
 import PackagesSection from "@/components/sections/PackagesSection";
@@ -154,7 +155,7 @@ export default function Home() {
 
         {/* Why Al Habib Travel Section */}
         <WhyAlHabibSection />
-        
+
         {/* The Significance of Umrah in Islam */}
         <SeoTextSection height={330}>
           <div>
@@ -213,6 +214,9 @@ export default function Home() {
           </div>
         </SeoTextSection>
 
+        {/* Economy Packages Section */}
+        <EconomyPackagesSection />
+
         {/* Reviews Sections */}
         <ReviewsSection />
 
@@ -220,13 +224,13 @@ export default function Home() {
         <SeoTextSection height={300}>
           <h1>Consideration of Senior Citizens, Kids, & Disabled Persons Needs</h1>
           <p>
-          Al Habib Travel believes that Umrah should be accessible and convenient for senior citizens, children, and handicapped persons. Our Umrah packages are designed to suit every kind of traveller because we recognize the diverse needs of various pilgrims. Special services are provided for elderly pilgrims, with provisions for extra assistance, comfortable accommodations, and smooth transportation to and from the Haram. Al Habib Travel offers wheelchair accessibility services, priority service, and guided assistance to make the whole journey easier for you.
+            Al Habib Travel believes that Umrah should be accessible and convenient for senior citizens, children, and handicapped persons. Our Umrah packages are designed to suit every kind of traveller because we recognize the diverse needs of various pilgrims. Special services are provided for elderly pilgrims, with provisions for extra assistance, comfortable accommodations, and smooth transportation to and from the Haram. Al Habib Travel offers wheelchair accessibility services, priority service, and guided assistance to make the whole journey easier for you.
           </p>
           <p>
-          Families travelling with small children will also find our family-friendly Umrah packages beneficial. We provide kid-friendly hotels and dining options, plus transportation, so parents can focus on their prayers without worrying about the little ones. Al Habib Travel arranges supporting facilities such as babysitters and prayer areas for families for even greater convenience.
+            Families travelling with small children will also find our family-friendly Umrah packages beneficial. We provide kid-friendly hotels and dining options, plus transportation, so parents can focus on their prayers without worrying about the little ones. Al Habib Travel arranges supporting facilities such as babysitters and prayer areas for families for even greater convenience.
           </p>
           <p>
-          Al Habib Travel&apos;s arrangements for disabled pilgrims ensure that every aspect of their journey is accessible. Our team also helps arrange wheelchairs, airport transfers, and any other assistance they need to make Umrah an experience each of them can enjoy. Whatever the age or condition, Al Habib Travel promises to provide an easy, safe, and spiritually fulfilling Umrah journey.
+            Al Habib Travel&apos;s arrangements for disabled pilgrims ensure that every aspect of their journey is accessible. Our team also helps arrange wheelchairs, airport transfers, and any other assistance they need to make Umrah an experience each of them can enjoy. Whatever the age or condition, Al Habib Travel promises to provide an easy, safe, and spiritually fulfilling Umrah journey.
           </p>
         </SeoTextSection>
 
@@ -237,13 +241,13 @@ export default function Home() {
         <SeoTextSection height={340}>
           <h1>Plan your Umrah with Al-Habib Travels Now!</h1>
           <p>
-          A dream for many, Umrah is now made possible with Al-Habib Travels, which means that our commitment to wholesome service at prices you can afford is to ensure that you&apos;re comfortable during this pilgrimage and that it is rewarding and spiritually uplifting.
+            A dream for many, Umrah is now made possible with Al-Habib Travels, which means that our commitment to wholesome service at prices you can afford is to ensure that you&apos;re comfortable during this pilgrimage and that it is rewarding and spiritually uplifting.
           </p>
           <p>
-          Booking your Umrah with Al-Habib Travels guarantees an embrace from visa processing to accommodation and transport. Our qualified team will be there for you, helping you every step of the way so that you can convert every moment of your time to reflect on what is crucial to you - your spiritual journey!
+            Booking your Umrah with Al-Habib Travels guarantees an embrace from visa processing to accommodation and transport. Our qualified team will be there for you, helping you every step of the way so that you can convert every moment of your time to reflect on what is crucial to you - your spiritual journey!
           </p>
           <p>
-          Don&apos;t miss this grand opportunity to turn a pilgrimage into a life-changing experience with Al-Habib Travels. Talk to us today; we&apos;ll take care of the arrangements while you prepare for this all-important journey. Whether you are searching for cheap Umrah packages or want a luxury pilgrimage for the soul, we have the right choice! 
+            Don&apos;t miss this grand opportunity to turn a pilgrimage into a life-changing experience with Al-Habib Travels. Talk to us today; we&apos;ll take care of the arrangements while you prepare for this all-important journey. Whether you are searching for cheap Umrah packages or want a luxury pilgrimage for the soul, we have the right choice!
           </p>
           <button className="self-center mb-5 btn-primary">Book your Package Now</button>
         </SeoTextSection>

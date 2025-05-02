@@ -41,20 +41,21 @@ interface db_query_Interface {
     rating?: number,
 }
 
-export async function getPackages({ db_query, limit }:{ db_query?: db_query_Interface, limit?: number }): Promise<packagesActionResponse> {
-    // Fetch packages from the backend API
+// Fetch packages from the backend API
+export async function getPackages({ db_query, limit }: { db_query?: db_query_Interface, limit?: number }): Promise<packagesActionResponse> {
     try {
         const response = await axiosClient.get("/packages", {
-            data: { db_query, limit }
+            data: { db_query, limit },
+            method: 'GET'
         });
-        
+
         return {
             success: true,
             message: "Packages fetched successfully",
             data: response.data
         };
     } catch (error: unknown) {
-        console.error("Error fetching packages:", error);
+        // console.error("Error fetching packages:", error);
         return {
             success: false,
             message: "Error fetching packages",

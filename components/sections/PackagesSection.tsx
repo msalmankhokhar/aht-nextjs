@@ -1,132 +1,33 @@
-import Image from 'next/image'
+import { getPackages, packagesActionResponse } from '@/actions/packages.actions'
 import React from 'react'
-import { FaFlag } from 'react-icons/fa'
-import { LuPhone } from 'react-icons/lu'
+import PackageCard from '../PackageCard'
 
-export default function PackagesSection() {
+export default async function PackagesSection() {
+
+    const packagesResponse: packagesActionResponse = await getPackages({});
+    console.log(packagesResponse);
+
     return (
         <section className="py-20 flex flex-col gap-y-20">
 
             {/* 5 Star Packages */}
             <div>
                 <h1 className="px-5 text-4xl font-bold text-center mb-16 text-brand-secondary">5 Star Umrah Packages</h1>
-                <div className="px-5 flex justify-center gap-6 relative">
+                <div className="px-5 flex justify-center relative">
+
                     {/* Package Cards */}
 
-                    <div className="w-full h-1/2 top-[25%] bg-brand-secondary absolute"></div>
-
-                    <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
-                        <div className="relative w-[310px] aspect-[16/10]">
-                            <Image
-                                alt='umrah package thumnail'
-                                src={'/images/packages/default_saad.jpg'}
-                                fill
-                                className="rounded-xl object-cover object-center"
-                            />
-                        </div>
-                        <div className="py-4 px-6">
-                            <h2 className="text-base text-center font-semibold pb-1.5">07 Nights 3 Star Umrah Package</h2>
-                            <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
-                            <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Makkah: </strong>Jabal Omar Marriott (5N)
-                                </p>
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Madinah: </strong>Al Agee Madinah (5N)
-                                </p>
-                            </div>
-                            <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
-                            <p className="text-[0.8rem] text-brand-secondary">Flight | Visa | Transport | Accomodation</p>
-                            <div className="flex justify-end my-4">
-                                <div className="py-1.5 text-[0.70rem] flex items-center gap-1.5 font-medium text-brand-secondary-700 px-5 rounded-full bg-brand-primary-200 w-fit">
-                                    <FaFlag />
-                                    <span>All Inclusive Package</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-2 flex-wrap">
-                                <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                                <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
-                                    <LuPhone size={16} />
-                                    <span>Call Us</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
-                        <div className="relative w-[310px] aspect-[16/10]">
-                            <Image
-                                alt='umrah package thumnail'
-                                src={'/images/packages/default_saad.jpg'}
-                                fill
-                                className="rounded-xl object-cover object-center"
-                            />
-                        </div>
-                        <div className="py-4 px-6">
-                            <h2 className="text-base text-center font-semibold pb-1.5">07 Nights 3 Star Umrah Package</h2>
-                            <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
-                            <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Makkah: </strong>Jabal Omar Marriott (5N)
-                                </p>
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Madinah: </strong>Al Agee Madinah (5N)
-                                </p>
-                            </div>
-                            <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
-                            <p className="text-[0.8rem] text-brand-secondary">Flight | Visa | Transport | Accomodation</p>
-                            <div className="flex justify-end my-4">
-                                <div className="py-1.5 text-[0.70rem] flex items-center gap-1.5 font-medium text-brand-secondary-700 px-5 rounded-full bg-brand-primary-200 w-fit">
-                                    <FaFlag />
-                                    <span>All Inclusive Package</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-2 flex-wrap">
-                                <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                                <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
-                                    <LuPhone size={16} />
-                                    <span>Call Us</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
-                        <div className="relative w-[310px] aspect-[16/10]">
-                            <Image
-                                alt='umrah package thumnail'
-                                src={'/images/packages/default_saad.jpg'}
-                                fill
-                                className="rounded-xl object-cover object-center"
-                            />
-                        </div>
-                        <div className="py-4 px-6">
-                            <h2 className="text-base text-center font-semibold pb-1.5">07 Nights 3 Star Umrah Package</h2>
-                            <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
-                            <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Makkah: </strong>Jabal Omar Marriott (5N)
-                                </p>
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Madinah: </strong>Al Agee Madinah (5N)
-                                </p>
-                            </div>
-                            <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
-                            <p className="text-[0.8rem] text-brand-secondary">Flight | Visa | Transport | Accomodation</p>
-                            <div className="flex justify-end my-4">
-                                <div className="py-1.5 text-[0.70rem] flex items-center gap-1.5 font-medium text-brand-secondary-700 px-5 rounded-full bg-brand-primary-200 w-fit">
-                                    <FaFlag />
-                                    <span>All Inclusive Package</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-2 flex-wrap">
-                                <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                                <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
-                                    <LuPhone size={16} />
-                                    <span>Call Us</span>
-                                </button>
-                            </div>
-                        </div>
+                    <div className="w-full h-[80%] top-[10%] min-[835px]:h-1/2 min-[835px]:top-[25%] bg-brand-secondary absolute"></div>
+                    <div className="grid grid-cols-1 min-[835px]:grid-cols-2 min-[1235px]:grid-cols-3 justify-center max-w-[90%] mx-auto content-center flex-wrap gap-6">
+                    {
+                        packagesResponse.success ? (
+                            packagesResponse.data?.packages.filter((pkg) => pkg.rating === 5).map((pkg) => (
+                                <PackageCard key={pkg._id} {...pkg} />
+                            ))
+                        ) : (
+                            <div className="text-center text-lg text-red-500 bg-white z-[1] w-full px-5 py-6 border border-gray-200 rounded-xl">{packagesResponse.message}</div>
+                        )
+                    }
                     </div>
 
                 </div>
@@ -138,120 +39,18 @@ export default function PackagesSection() {
                 <div className="px-5 flex justify-center gap-6 relative">
                     {/* Package Cards */}
 
-                    <div className="w-full h-1/2 top-[25%] bg-brand-secondary absolute"></div>
+                    <div className="w-full h-[80%] top-[10%] min-[835px]:h-1/2 min-[835px]:top-[25%] bg-brand-secondary absolute"></div>
 
-                    <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
-                        <div className="relative w-[310px] aspect-[16/10]">
-                            <Image
-                                alt='umrah package thumnail'
-                                src={'/images/packages/default_saad.jpg'}
-                                fill
-                                className="rounded-xl object-cover object-center"
-                            />
-                        </div>
-                        <div className="py-4 px-6">
-                            <h2 className="text-base text-center font-semibold pb-1.5">07 Nights 3 Star Umrah Package</h2>
-                            <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
-                            <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Makkah: </strong>Jabal Omar Marriott (5N)
-                                </p>
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Madinah: </strong>Al Agee Madinah (5N)
-                                </p>
-                            </div>
-                            <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
-                            <p className="text-[0.8rem] text-brand-secondary">Flight | Visa | Transport | Accomodation</p>
-                            <div className="flex justify-end my-4">
-                                <div className="py-1.5 text-[0.70rem] flex items-center gap-1.5 font-medium text-brand-secondary-700 px-5 rounded-full bg-brand-primary-200 w-fit">
-                                    <FaFlag />
-                                    <span>All Inclusive Package</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-2 flex-wrap">
-                                <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                                <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
-                                    <LuPhone size={16} />
-                                    <span>Call Us</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
-                        <div className="relative w-[310px] aspect-[16/10]">
-                            <Image
-                                alt='umrah package thumnail'
-                                src={'/images/packages/default_saad.jpg'}
-                                fill
-                                className="rounded-xl object-cover object-center"
-                            />
-                        </div>
-                        <div className="py-4 px-6">
-                            <h2 className="text-base text-center font-semibold pb-1.5">07 Nights 3 Star Umrah Package</h2>
-                            <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
-                            <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Makkah: </strong>Jabal Omar Marriott (5N)
-                                </p>
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Madinah: </strong>Al Agee Madinah (5N)
-                                </p>
-                            </div>
-                            <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
-                            <p className="text-[0.8rem] text-brand-secondary">Flight | Visa | Transport | Accomodation</p>
-                            <div className="flex justify-end my-4">
-                                <div className="py-1.5 text-[0.70rem] flex items-center gap-1.5 font-medium text-brand-secondary-700 px-5 rounded-full bg-brand-primary-200 w-fit">
-                                    <FaFlag />
-                                    <span>All Inclusive Package</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-2 flex-wrap">
-                                <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                                <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
-                                    <LuPhone size={16} />
-                                    <span>Call Us</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
-                        <div className="relative w-[310px] aspect-[16/10]">
-                            <Image
-                                alt='umrah package thumnail'
-                                src={'/images/packages/default_saad.jpg'}
-                                fill
-                                className="rounded-xl object-cover object-center"
-                            />
-                        </div>
-                        <div className="py-4 px-6">
-                            <h2 className="text-base text-center font-semibold pb-1.5">07 Nights 3 Star Umrah Package</h2>
-                            <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
-                            <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Makkah: </strong>Jabal Omar Marriott (5N)
-                                </p>
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Madinah: </strong>Al Agee Madinah (5N)
-                                </p>
-                            </div>
-                            <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
-                            <p className="text-[0.8rem] text-brand-secondary">Flight | Visa | Transport | Accomodation</p>
-                            <div className="flex justify-end my-4">
-                                <div className="py-1.5 text-[0.70rem] flex items-center gap-1.5 font-medium text-brand-secondary-700 px-5 rounded-full bg-brand-primary-200 w-fit">
-                                    <FaFlag />
-                                    <span>All Inclusive Package</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-2 flex-wrap">
-                                <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                                <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
-                                    <LuPhone size={16} />
-                                    <span>Call Us</span>
-                                </button>
-                            </div>
-                        </div>
+                    <div className="grid grid-cols-1 min-[835px]:grid-cols-2 min-[1235px]:grid-cols-3 justify-center max-w-[90%] mx-auto content-center flex-wrap gap-6">
+                    {
+                        packagesResponse.success ? (
+                            packagesResponse.data?.packages.filter((pkg) => pkg.rating === 4).map((pkg) => (
+                                <PackageCard key={pkg._id} {...pkg} />
+                            ))
+                        ) : (
+                            <div className="text-center text-lg text-red-500 bg-white z-[1] w-full px-5 py-6 border border-gray-200 rounded-xl">{packagesResponse.message}</div>
+                        )
+                    }
                     </div>
 
                 </div>
@@ -263,120 +62,18 @@ export default function PackagesSection() {
                 <div className="px-5 flex justify-center gap-6 relative">
                     {/* Package Cards */}
 
-                    <div className="w-full h-1/2 top-[25%] bg-brand-secondary absolute"></div>
+                    <div className="w-full h-[80%] top-[10%] min-[835px]:h-1/2 min-[835px]:top-[25%] bg-brand-secondary absolute"></div>
 
-                    <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
-                        <div className="relative w-[310px] aspect-[16/10]">
-                            <Image
-                                alt='umrah package thumnail'
-                                src={'/images/packages/default_saad.jpg'}
-                                fill
-                                className="rounded-xl object-cover object-center"
-                            />
-                        </div>
-                        <div className="py-4 px-6">
-                            <h2 className="text-base text-center font-semibold pb-1.5">07 Nights 3 Star Umrah Package</h2>
-                            <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
-                            <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Makkah: </strong>Jabal Omar Marriott (5N)
-                                </p>
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Madinah: </strong>Al Agee Madinah (5N)
-                                </p>
-                            </div>
-                            <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
-                            <p className="text-[0.8rem] text-brand-secondary">Flight | Visa | Transport | Accomodation</p>
-                            <div className="flex justify-end my-4">
-                                <div className="py-1.5 text-[0.70rem] flex items-center gap-1.5 font-medium text-brand-secondary-700 px-5 rounded-full bg-brand-primary-200 w-fit">
-                                    <FaFlag />
-                                    <span>All Inclusive Package</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-2 flex-wrap">
-                                <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                                <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
-                                    <LuPhone size={16} />
-                                    <span>Call Us</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
-                        <div className="relative w-[310px] aspect-[16/10]">
-                            <Image
-                                alt='umrah package thumnail'
-                                src={'/images/packages/default_saad.jpg'}
-                                fill
-                                className="rounded-xl object-cover object-center"
-                            />
-                        </div>
-                        <div className="py-4 px-6">
-                            <h2 className="text-base text-center font-semibold pb-1.5">07 Nights 3 Star Umrah Package</h2>
-                            <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
-                            <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Makkah: </strong>Jabal Omar Marriott (5N)
-                                </p>
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Madinah: </strong>Al Agee Madinah (5N)
-                                </p>
-                            </div>
-                            <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
-                            <p className="text-[0.8rem] text-brand-secondary">Flight | Visa | Transport | Accomodation</p>
-                            <div className="flex justify-end my-4">
-                                <div className="py-1.5 text-[0.70rem] flex items-center gap-1.5 font-medium text-brand-secondary-700 px-5 rounded-full bg-brand-primary-200 w-fit">
-                                    <FaFlag />
-                                    <span>All Inclusive Package</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-2 flex-wrap">
-                                <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                                <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
-                                    <LuPhone size={16} />
-                                    <span>Call Us</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
-                        <div className="relative w-[310px] aspect-[16/10]">
-                            <Image
-                                alt='umrah package thumnail'
-                                src={'/images/packages/default_saad.jpg'}
-                                fill
-                                className="rounded-xl object-cover object-center"
-                            />
-                        </div>
-                        <div className="py-4 px-6">
-                            <h2 className="text-base text-center font-semibold pb-1.5">07 Nights 3 Star Umrah Package</h2>
-                            <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
-                            <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Makkah: </strong>Jabal Omar Marriott (5N)
-                                </p>
-                                <p className="text-gray-700">
-                                    <strong className="font-medium text-brand-primary">Madinah: </strong>Al Agee Madinah (5N)
-                                </p>
-                            </div>
-                            <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
-                            <p className="text-[0.8rem] text-brand-secondary">Flight | Visa | Transport | Accomodation</p>
-                            <div className="flex justify-end my-4">
-                                <div className="py-1.5 text-[0.70rem] flex items-center gap-1.5 font-medium text-brand-secondary-700 px-5 rounded-full bg-brand-primary-200 w-fit">
-                                    <FaFlag />
-                                    <span>All Inclusive Package</span>
-                                </div>
-                            </div>
-                            <div className="flex gap-2 flex-wrap">
-                                <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                                <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
-                                    <LuPhone size={16} />
-                                    <span>Call Us</span>
-                                </button>
-                            </div>
-                        </div>
+                    <div className="grid grid-cols-1 min-[835px]:grid-cols-2 min-[1235px]:grid-cols-3 justify-center max-w-[90%] mx-auto content-center flex-wrap gap-6">
+                    {
+                        packagesResponse.success ? (
+                            packagesResponse.data?.packages.filter((pkg) => pkg.rating === 3 && pkg.category === 'popular').map((pkg) => (
+                                <PackageCard key={pkg._id} {...pkg} />
+                            ))
+                        ) : (
+                            <div className="text-center text-lg text-red-500 bg-white z-[1] w-full px-5 py-6 border border-gray-200 rounded-xl">{packagesResponse.message}</div>
+                        )
+                    }
                     </div>
 
                 </div>
