@@ -10,15 +10,15 @@ interface WhyAHTCardProps {
 
 export default function WhyAHTCard({ heading, description, imagePath, extra }: WhyAHTCardProps) {
     return (
-        <div className="max-w-[1200px] min-h-[300px] overflow-hidden z-[1] bg-white flex rounded-xl ring ring-brand-secondary-100">
-            <div className="p-10 max-w-3/5">
-                <h2 className="text-brand-secondary font-bold text-3xl mb-5">{heading}</h2>
-                <p className="text-lg mb-10 text-brand-secondary tracking-wide">
+        <div className="max-w-[320px] min-h-[470px] px-3.5 py-4 overflow-hidden z-[1] bg-white flex flex-col justify-between rounded-xl ring ring-brand-secondary-100">
+            <div className='mb-6'>
+                <h2 className="text-brand-secondary font-semibold text-lg mb-3">{heading}</h2>
+                <p className="text-sm text-brand-secondary tracking-wide">
                     {description}
                 </p>
-                {extra}
+                {/* {extra} */}
             </div>
-            <div className="relative w-full">
+            <div className="relative w-full h-[200px] rounded-lg overflow-hidden">
                 <Image
                     alt='makkah city'
                     src={imagePath}

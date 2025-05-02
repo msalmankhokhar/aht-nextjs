@@ -13,7 +13,7 @@ export default function WhyAlHabibSection() {
                     <div className="gradient-brand-teal bg-gradient-to-t to-brand-secondary-400 w-full h-[70%] top-[15%] absolute">
                         <BgPattern />
                     </div>
-                    <div className="px-cont flex flex-col gap-8 justify-center items-center">
+                    <div className="px-cont flex gap-8 justify-center items-center">
 
                         {/* Why Al Habib Travel */}
 
