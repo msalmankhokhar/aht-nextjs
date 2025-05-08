@@ -4,8 +4,11 @@ import React from 'react'
 import { FaFlag } from 'react-icons/fa'
 import { LuPhone } from 'react-icons/lu'
 
+interface PackageCardProps {
+    data?: packageInterface
+}
 
-export default function PackageCard({ title, makkahNights, madinahNights, makkahHotel, madinahHotel }: packageInterface) {
+export default function PackageCard({ data = defaultPackage }: PackageCardProps) {
     return (
         <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
             {/* aspect-[16/10] */}
@@ -18,14 +21,14 @@ export default function PackageCard({ title, makkahNights, madinahNights, makkah
                 />
             </div>
             <div className="py-4 px-6">
-                <h3 className="text-base text-center font-semibold pb-1.5">{title}</h3>
+                <h3 className="text-base text-center font-semibold pb-1.5">{data.title}</h3>
                 <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
                 <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
                     <p className="text-gray-700">
-                        <strong className="font-medium text-brand-primary">Makkah: </strong>{makkahHotel.name} ({makkahNights}N)
+                        <strong className="font-medium text-brand-primary">Makkah: </strong>{data.makkahHotel.name} ({data.makkahNights}N)
                     </p>
                     <p className="text-gray-700">
-                        <strong className="font-medium text-brand-primary">Madinah: </strong>{madinahHotel.name} ({madinahNights}N)
+                        <strong className="font-medium text-brand-primary">Madinah: </strong>{data.madinahHotel.name} ({data.madinahNights}N)
                     </p>
                 </div>
                 <div className="px-5 py-1.5 rounded-full bg-gray-200/70 mb-3 text-xs text-brand-secondary-700 font-medium w-fit">Package Includes</div>
@@ -47,3 +50,33 @@ export default function PackageCard({ title, makkahNights, madinahNights, makkah
         </div>
     )
 }
+
+
+const defaultPackage: packageInterface = {
+    "_id": "67f8bf9dc92bb12e7f8ad15a",
+    "title": "07 Nights 3 Star Umrah Package",
+    "purpose": "Umrah",
+    "category": "popular",
+    "labels": [],
+    "makkahNights": 4,
+    "madinahNights": 3,
+    "inclusions": [
+    "Flight",
+    "Visa",
+    "Transport",
+    "Accomodation"
+    ],
+    "exclusions": [
+    "Meals",
+    "Insurance"
+    ],
+    "accomType": "Quad",
+    "price": 755,
+    "makkahHotel": {
+    "name": "Emaar Al Khalil",
+    },
+    "madinahHotel": {
+    "name": "Emaar Taibah",
+    },
+    "rating": 3
+    }
