@@ -30,10 +30,6 @@ export default function PackageCardSwiper({ data = [] }: PackageCardSwiperProps)
                         slidesPerView: 3.5,
                         spaceBetween: 24,
                     },
-                    1280: { // xl
-                        slidesPerView: 4.5,
-                        spaceBetween: 24,
-                    }
                 }}
             >
                 {data.map((pkg) => (
