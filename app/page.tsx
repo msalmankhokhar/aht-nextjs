@@ -12,15 +12,16 @@ import SeoTextSection from "@/components/sections/SeoTextSection";
 import WhatsIncludedSection from "@/components/sections/WhatsIncludedSection";
 import WhyAlHabibSection from "@/components/sections/WhyAlHabibSection";
 import { getYear } from "@/lib/utils";
-import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `Best Umrah Packages ${getYear()} - Umrah Travel Agency`,
+  description: "Book Your Umrah Package from the UK with AL Habib Travel. We have all inclusive packages with exclusive Umrah deals including flights, hotels, visa, etc.",
+}
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Best Umrah Packages {getYear()} - Umrah Travel Agency</title>
-        <meta name="description" content="Book Your Umrah Package from the UK with AL Habib Travel. We have all inclusive packages with exclusive Umrah deals including flights, hotels, visa, etc." />
-      </Head>
 
       <Navbar variant="navbar-colored" />
 
