@@ -18,7 +18,7 @@ export default function PackageCard({ title, makkahNights, madinahNights, makkah
                 />
             </div>
             <div className="py-4 px-6">
-                <h2 className="text-base text-center font-semibold pb-1.5">{title}</h2>
+                <h3 className="text-base text-center font-semibold pb-1.5">{title}</h3>
                 <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
                 <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
                     <p className="text-gray-700">
@@ -37,8 +37,8 @@ export default function PackageCard({ title, makkahNights, madinahNights, makkah
                     </div>
                 </div>
                 <div className="flex gap-2 flex-wrap">
-                    <button className="btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                    <button className="btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
+                    <button className="text-nowrap btn-primary text-sm flex-1 rounded-lg">View Price</button>
+                    <button className="text-nowrap btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
                         <LuPhone size={16} />
                         <span>Call Us</span>
                     </button>

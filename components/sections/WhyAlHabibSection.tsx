@@ -7,12 +7,12 @@ export default function WhyAlHabibSection() {
         <section className="py-24 flex flex-col gap-20">
 
             <div>
-                <h1 className="text-4xl font-bold mb-16 text-brand-secondary text-center">Why Al Habib Travel ?</h1>
+                {/* <h2 className="text-4xl font-bold mb-16 text-brand-secondary text-center">Why Al Habib Travel ?</h2> */}
                 <div className="relative">
                     <div className="gradient-brand-teal bg-gradient-to-t to-brand-secondary-400 w-full h-[70%] top-[15%] absolute">
                         <BgPattern />
                     </div>
-                    <div className="px-cont flex gap-5 justify-center">
+                    <div className="px-cont flex flex-wrap gap-5 justify-center">
                         <WhyAHTCard
                             heading="Welcome to Superb Umrah Package"
                             description="Al Habib Travel is a reowned company

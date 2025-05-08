@@ -12,7 +12,7 @@ export default async function PackagesSection() {
 
             {/* 5 Star Packages */}
             <div>
-                <h1 className="px-5 text-4xl font-bold text-center mb-16 text-brand-secondary">5 Star Umrah Packages</h1>
+                <h2 className="px-5 text-4xl font-bold text-center mb-16 text-brand-secondary">5 Star Umrah Packages</h2>
                 <div className="px-5 flex justify-center relative">
 
                     {/* Package Cards */}
@@ -35,7 +35,7 @@ export default async function PackagesSection() {
 
             {/* 4 Star Packages */}
             <div>
-                <h1 className="px-5 text-4xl font-bold text-center mb-16 text-brand-secondary">4 Star Umrah Packages</h1>
+                <h2 className="px-5 text-4xl font-bold text-center mb-16 text-brand-secondary">4 Star Umrah Packages</h2>
                 <div className="px-5 flex justify-center gap-6 relative">
                     {/* Package Cards */}
 
@@ -58,7 +58,7 @@ export default async function PackagesSection() {
 
             {/* 3 Star Packages */}
             <div>
-                <h1 className="px-5 text-4xl font-bold text-center mb-16 text-brand-secondary">3 Star Umrah Packages</h1>
+                <h2 className="px-5 text-4xl font-bold text-center mb-16 text-brand-secondary">3 Star Umrah Packages</h2>
                 <div className="px-5 flex justify-center gap-6 relative">
                     {/* Package Cards */}
 

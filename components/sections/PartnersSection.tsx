@@ -4,10 +4,10 @@ import BgPattern from '../BgPattern'
 
 export default function PartnersSection() {
     return (
-        <div className="bg-brand-secondary relative px-cont mx-auto rounded-lg container py-16 my-16">
+        <div className="bg-brand-secondary relative max-w-cont mx-5 sm:mx-10 xl:max-w-cont rounded-lg py-16 my-16">
             <BgPattern />
-            <h1 className="text-white text-center text-3xl font-bold mb-10">We proudly cooperate with</h1>
-            <div className="grid grid-cols-[170px_170px_170px] gap-7 justify-center items-center relative">
+            <h2 className="text-white text-center text-3xl font-bold mb-10">We proudly cooperate with</h2>
+            <div className="grid grid-cols-[170px] min-[500px]:grid-cols-[170px_170px] min-[700px]:grid-cols-[170px_170px_170px] gap-7 justify-center items-center relative">
 
                 <Image
                     alt='aeroplane background'

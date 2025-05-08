@@ -4,7 +4,7 @@ import { LuArrowRight } from 'react-icons/lu'
 
 export default function HomeHeroSection() {
     return (
-        <div className="pl-24 pr-7 pb-24 pt-10 flex items-center justify-center">
+        <div className="px-5 sm:px-10 min-[1070px]:pl-24 min-[1070px]:pr-7 pb-24 pt-10 flex flex-col min-[1070px]:flex-row items-center justify-center">
             <div className="max-w-[660px] w-full flex flex-col">
                 <h1 className="tracking-wide leading-14 mb-6 text-[2.7rem] font-bold text-brand-secondary">All Inclusive Umrah Packages with Guided Tour.</h1>
                 <p className="tracking-wide mb-16 text-brand-secondary-600 text-2xl font-medium">

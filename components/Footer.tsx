@@ -10,13 +10,13 @@ export default function Footer() {
                     <div className="font-semibold text-white text-3xl">Let&apos;s <span className="text-brand-primary-400">Connect</span> there</div>
                     <button className="btn-primary-white">Call Now</button>
                 </div>
-                <div className="flex justify-between py-6 z-[1]">
+                <div className="flex flex-wrap justify-between py-6 z-[1]">
                     <div>
-                        <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">About Us</h2>
+                        <h3 className="text-brand-primary-400 font-semibold text-lg mb-2">About Us</h3>
                         <p className="text-white tracking-wider max-w-[250px] text-sm">Al Habib Travel is the most trusted & reliable agency among UK Muslims. We provide bespoke Umrah travel solutions & package designing services to meet budget range and facilities requirements of pilgrims.</p>
                     </div>
                     <div>
-                        <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">Travel</h2>
+                        <h3 className="text-brand-primary-400 font-semibold text-lg mb-2">Travel</h3>
                         <ul className="flex flex-col">
                             <li><Link className="text-white text-sm" href={'#'}>Home</Link></li>
                             <li><Link className="text-white text-sm" href={'#'}>Umrah Packages</Link></li>
@@ -26,7 +26,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">Our Terms</h2>
+                        <h3 className="text-brand-primary-400 font-semibold text-lg mb-2">Our Terms</h3>
                         <ul className="flex flex-col">
                             <li><Link className="text-white text-sm" href={'#'}>Travel Insurance</Link></li>
                             <li><Link className="text-white text-sm" href={'#'}>Terms and Conditions</Link></li>
@@ -39,12 +39,12 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2">
                         <div>
-                            <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">Contact Us</h2>
+                            <h3 className="text-brand-primary-400 font-semibold text-lg mb-2">Contact Us</h3>
                             <p className="text-sm tracking-wider font-semibold mb-1 text-white">0203 504 2344</p>
                             <p className="text-sm tracking-wider text-white">info@alhabibtravel.com</p>
                         </div>
                         <div>
-                            <h2 className="text-brand-primary-400 font-semibold text-lg mb-2">Office</h2>
+                            <h3 className="text-brand-primary-400 font-semibold text-lg mb-2">Office</h3>
                             <p className="text-sm tracking-wider max-w-[220px] text-white">
                                 Office 10378 182-184 High Street
                                 North East Ham London

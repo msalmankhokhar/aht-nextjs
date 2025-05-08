@@ -36,9 +36,9 @@ const defaultFaqs: FaqProps[] = [
 export default function FaqsSection({ faqs= defaultFaqs }: FaqsSectionProps) {
     return (
         <section className="px-cont py-20">
-            <h1 className="text-2xl sm:text-4xl font-bold text-center text-brand-secondary mb-16">Frequently Asked Questions</h1>
+            <h2 className="text-2xl sm:text-4xl font-bold text-center text-brand-secondary mb-16">Frequently Asked Questions</h2>
             {/* Section Content */}
-            <div className="flex gap-5">
+            <div className="flex flex-wrap gap-5">
                 <div className='flex-1'>
                     <div className="border-l border-r border-b border-gray-300">
                         {
@@ -56,7 +56,7 @@ export default function FaqsSection({ faqs= defaultFaqs }: FaqsSectionProps) {
                     <div className="size-[65px] rounded-full bg-white flex items-center justify-center">
                         <LuPhone size={24} className="text-brand-secondary-400" />
                     </div>
-                    <h1 className="text-center font-bold text-white text-2xl">Have a different question?</h1>
+                    <h2 className="text-center font-bold text-white text-2xl">Have a different question?</h2>
                     <div className="h-[5px] rounded max-w-[100px] w-full bg-brand-primary-400"></div>
                     <p className="text-white max-w-[300px] text-center">
                         Our team will answer all your questions.

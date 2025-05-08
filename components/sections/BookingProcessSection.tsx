@@ -37,7 +37,7 @@ const data = [
 export default function BookingProcessSection() {
     return (
         <div className="py-10 px-cont">
-            <h1 className="text-3xl font-bold text-brand-secondary mb-12 text-center">Our Booking <span className="text-brand-primary">Process</span></h1>
+            <h2 className="text-3xl font-bold text-brand-secondary mb-12 text-center">Our Booking <span className="text-brand-primary">Process</span></h2>
             
             {/* Main container with grid for larger screens and column for mobile */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-5 max-w-6xl mx-auto">
@@ -49,7 +49,7 @@ export default function BookingProcessSection() {
                             <div className="bg-brand-secondary size-[45px] rounded-full flex items-center justify-center font-bold text-lg text-white mb-8">
                                 <span>{item.step}</span>
                             </div>
-                            <h2 className="text-center text-base font-semibold text-brand-secondary mb-3">{item.title}</h2>
+                            <h3 className="text-center text-base font-semibold text-brand-secondary mb-3">{item.title}</h3>
                             <p className="text-brand-secondary-600 text-sm text-center">
                                 {item.description}
                             </p>

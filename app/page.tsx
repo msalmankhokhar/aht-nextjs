@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Head>
         <title>Best Umrah Packages {getYear()} - Umrah Travel Agency</title>
-        <meta name="description" content="Book Your Umrah Package in UK with AL Habib Travel,  We have all inclusive packages for you next umrah journey. We brings exclusive Umrah deals including flights, hotels, visa etc." />
+        <meta name="description" content="Book Your Umrah Package from the UK with AL Habib Travel. We have all inclusive packages with exclusive Umrah deals including flights, hotels, visa, etc." />
       </Head>
 
       <Navbar variant="navbar-colored" />
@@ -36,7 +36,7 @@ export default function Home() {
         <PackagesSection />
 
         <SeoTextSection height={330}>
-          <h1>Umrah Packages: Experience a Spiritually Rewarding Umrah Journey</h1>
+          <h2>Umrah Packages: Experience a Spiritually Rewarding Umrah Journey</h2>
           <div>
             <p>
               Embark on your sacred pilgrimage with Al Habib Travel, a leading Umrah travel agency in the UK, offering the best packages. So whether you are planning on undertaking an Umrah from the UK in 2025 or preparing for that beautiful pilgrimage with one of the affordable package options for Umrah from the UK, we can provide tailored assistance to make it all easy for you to prepare for a hassle-free and spiritually rewarding journey. With our exclusive Umrah packages 2025 for London and other cities in the UK, every pilgrim receives an intended hassle-free experience.
@@ -55,30 +55,30 @@ export default function Home() {
 
         {/* Umrah Package Types Offered by Al Habib Travel */}
         <SeoTextSection height={350}>
-          <h1>Umrah Package Types Offered by Al Habib Travel</h1>
+          <h2>Umrah Package Types Offered by Al Habib Travel</h2>
           <p>
             To meet the diverse needs and preferences of pilgrims, Al Habib Travel provides a wide selection of Umrah packages for various budgets and travel requirements. Al Habib will present some of the best Umrah Packages 2025, allowing you to decide which best suits your priorities.
           </p>
           <div>
-            <h2>Economy Umrah Packages</h2>
+            <h3>Economy Umrah Packages</h3>
             <p>
               Our economy Umrah packages are for all the budget pilgrims who see a chance to perform Umrah at an affordable low cost without compromising on the major services. The package includes economical flight tickets, accommodation in a private room or sharing with your family in 3-star hotels, and group transportation for cost-effective economies of comfort during the journey. These packages were designed to meet the budget of the pilgrims while fulfilling all their expectations for service and convenience.
             </p>
           </div>
           <div>
-            <h2>Luxury Umrah Packages</h2>
+            <h3>Luxury Umrah Packages</h3>
             <p>
               Luxury Umrah packages include great comfort and personal services, such as direct flights without stopovers, 5-star hotels within walking distance to the Haram Sharif, and private transportation with personal escort. Such packages target pilgrims who want to experience a stress-free luxurious experience with world-class comfort and services close to the holy sites.
             </p>
           </div>
           <div>
-            <h2>Family & Group Umrah Packages</h2>
+            <h3>Family & Group Umrah Packages</h3>
             <p>
               If you intend to perform Umrah with family members or a large group, the family and group Umrah packages have been designed to enable discounts, more space, and organized group travel arrangements. These packages ensure that the entire family or group may experience the journey together while benefiting from savings and shared spiritual growth.
             </p>
           </div>
           <div>
-            <h2>Customized Umrah Packages</h2>
+            <h3>Customized Umrah Packages</h3>
             <p>
               Here at Al Habib Travel, we understand the unique requirements of every pilgrim. Hence, we offer customized Umrah packages for you to customize your travel itinerary, types of accommodation available, transport options, and more. If you want an extended stay, special dietary arrangements, or an itinerary designed to fit your travel schedule; we will make it happen.
             </p>
@@ -90,63 +90,63 @@ export default function Home() {
 
         {/* Why choose Al Habib Travel for Umrah? */}
         <SeoTextSection height={330}>
-          <h1>Why Choose Al Habib Travel for your Umrah?</h1>
+          <h2>Why Choose Al Habib Travel for your Umrah?</h2>
           <div>
-            <h2>Affordable Packages</h2>
+            <h3>Affordable Packages</h3>
             <p>
               Reasonably priced to meet the diverse needs of customers while ensuring quality services, our various Umrah packages for 2025 according to the months will be available for you. We maintain the lowest prices without compromising on essential services. Our affordable rates will not cause you to hesitate or second-guess choosing an expensive Umrah tour. You will receive all the facilities at a fair price.
             </p>
           </div>
           <div>
-            <h2>Flexible Itineraries</h2>
+            <h3>Flexible Itineraries</h3>
             <p>
               Our itineraries are flexible regarding travel dates, length of stay, type of accommodation, etc.; whatever suits your schedule best with Al Habib. You can select the dates from the options if they align with your calendar. Then we can group you with others willing to travel on the same date.
             </p>
           </div>
           <div>
-            <h2>Top Accommodation</h2>
+            <h3>Top Accommodation</h3>
             <p>
               We collaborate with 3-star, 4-star, and 5-star hotels located near the Haram and Masjid Nabawi, which allows pilgrims to reach these holy sites easily. We are connected with some of the best hotels, offering luxurious accommodations at competitive prices.
             </p>
           </div>
           <div>
-            <h2>Seamless Visa & Flight Arrangements</h2>
+            <h3>Seamless Visa & Flight Arrangements</h3>
             <p>
               We arrange visas and offer flight options from major UK airports for seamless travel. We will maintain constant contact with you until your visa and passport are ready and set to go. We will always be available to assist you with any queries.
             </p>
           </div>
           <div>
-            <h2>Comfortable Transportation</h2>
+            <h3>Comfortable Transportation</h3>
             <p>
               We provide air-conditioned vehicles for airport transfers and intercity travel between Makkah and Madinah, ensuring a complete journey in comfort. You will enjoy the views of the city and the buildings around Makkah.
             </p>
           </div>
           <div>
-            <h2>Delicious Halal Meals</h2>
+            <h3>Delicious Halal Meals</h3>
             <p>
               Nutritious and halal meal options are provided according to the dietary needs of UK pilgrims. You will enjoy the delicious food provided by the hotel, and we will also take you to some of the best restaurants so you can savour the finest cuisine.
             </p>
           </div>
           <div>
-            <h2>Dedicated Customer Support</h2>
+            <h3>Dedicated Customer Support</h3>
             <p>
               Our travel consultants are experienced, and our support is available 24/7 to alleviate any concerns you may have before, during, or after your pilgrimage. We will be at your service every week.
             </p>
           </div>
           <div>
-            <h2>Group and Family Packages</h2>
+            <h3>Group and Family Packages</h3>
             <p>
               Whether you are traveling alone, with family, or in a group. We offer tailor-made options to suit your needs. Most people take an Umrah trip with their family to share their blessings and create lasting memories. We understand their requirements and fully plan for you and your family&apos;s needs, while also taking care of each individual, even in a group.
             </p>
           </div>
           <div>
-            <h2>Special assistance for elderly & disabled pilgrims</h2>
+            <h3>Special assistance for elderly & disabled pilgrims</h3>
             <p>
               For elderly and disabled pilgrims, we provide wheelchair help, tours with guides, and priority services for a seamless experience. We take it as our utmost responsibility to make it possible for elderly and disabled pilgrims to complete their Umrah trip.
             </p>
           </div>
           <div>
-            <h2>Exclusive Extras</h2>
+            <h3>Exclusive Extras</h3>
             <p>
               We offer additional services such as raincoats, guidebooks, and travel essentials for other convenience. If you forget anything essential, we will guide you to nearby stores. We will be providing you with full assistance.
             </p>
@@ -159,7 +159,7 @@ export default function Home() {
         {/* The Significance of Umrah in Islam */}
         <SeoTextSection height={330}>
           <div>
-            <h1>The Significance of Umrah in Islam</h1>
+            <h2>The Significance of Umrah in Islam</h2>
             <p>
               Umrah holds great significance in Islam and can be performed at any time of the year. Unlike Hajj, which is compulsory and at particular months, this one can be performed at any time since it is a voluntary act of worship. Much like any pilgrimage, it becomes a means through which millions of Muslims can approach Allah. To others, it brings purification of the soul and provides spiritual rewards. It is a sunnah practice of the Prophet Muhammad (PBUH), who has performed it during his lifetime, hence its significance.
             </p>
@@ -168,7 +168,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h1>Al Habib: Your Trusted Umrah Travel Agency</h1>
+            <h2>Al Habib: Your Trusted Umrah Travel Agency</h2>
             <p>
               An Umrah pilgrimage requires plenty of preparation, including the selection of the right travel partner. Al Habib is the leading Umrah travel agency with its motto of {`"Serving Pilgrims to the Best"`} and doing its utmost to service the pilgrims arriving from the UK. An old player in the market, Al Habib has made its name through honesty and professionalism with credibility and customer satisfaction.
             </p>
@@ -177,7 +177,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h1>Guidance for Travel Planning You Will Receive</h1>
+            <h2>Guidance for Travel Planning You Will Receive</h2>
             <p>
               Umrah is an extremely personal pilgrim journey that requires guidance for a fulfilling experience. By providing Umrah Packages, Al Habib attends to the detailed guidance expected from an Umrah journey. Al Habib, from Ihram preparation to the proper recitation of duas, has it all figured out for all travelers before jumping into that sacred journey.
             </p>
@@ -189,7 +189,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h1>Affordable Flights with 5-Star Accommodation for UK Citizens in Makkah & Medina</h1>
+            <h2>Affordable Flights with 5-Star Accommodation for UK Citizens in Makkah & Medina</h2>
             <p>
               Performing the holy rites of Umrah is a cherished dream for many Muslims in the UK. Al Habib Travel makes this spiritual pilgrimage affordable and luxurious with our unique range of well-structured Umrah packages. We ensure that every pilgrim experiences convenience, comfort, and spirituality without the burden of finances. Our exclusive Umrah packages from the UK include the cheapest flights to Jeddah and Medina; hence, pilgrims travel conveniently. Whether in economy class, Al Habib Travel has options to suit your budget and preferences.
             </p>
@@ -201,7 +201,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h1>Know Visa, Passport, and Other Important Procedures for Hajj and Umrah</h1>
+            <h2>Know Visa, Passport, and Other Important Procedures for Hajj and Umrah</h2>
             <p>
               Visas are necessary, passports must be checked, and any other required travel documents must be acquired for Umrah to proceed smoothly. Al Habib Travel simplifies the process for UK citizens by providing complete assistance in acquiring an Umrah visa. Our staff works to ensure the smooth processing of your visa application to minimise any possible delays or complications. With Al Habib Travel, you can obtain an Umrah visa while we take care of all the paperwork and submission steps on your behalf.
             </p>
@@ -222,7 +222,7 @@ export default function Home() {
 
         {/* Consideration of Senior Citizens, Kids, & Disabled Persons Needs */}
         <SeoTextSection height={300}>
-          <h1>Consideration of Senior Citizens, Kids, & Disabled Persons Needs</h1>
+          <h2>Consideration of Senior Citizens, Kids, & Disabled Persons Needs</h2>
           <p>
             Al Habib Travel believes that Umrah should be accessible and convenient for senior citizens, children, and handicapped persons. Our Umrah packages are designed to suit every kind of traveller because we recognize the diverse needs of various pilgrims. Special services are provided for elderly pilgrims, with provisions for extra assistance, comfortable accommodations, and smooth transportation to and from the Haram. Al Habib Travel offers wheelchair accessibility services, priority service, and guided assistance to make the whole journey easier for you.
           </p>
@@ -239,7 +239,7 @@ export default function Home() {
 
         {/* Plan your Umrah with Al-Habib Travels Now! */}
         <SeoTextSection height={340}>
-          <h1>Plan your Umrah with Al-Habib Travels Now!</h1>
+          <h2>Plan your Umrah with Al-Habib Travels Now!</h2>
           <p>
             A dream for many, Umrah is now made possible with Al-Habib Travels, which means that our commitment to wholesome service at prices you can afford is to ensure that you&apos;re comfortable during this pilgrimage and that it is rewarding and spiritually uplifting.
           </p>
