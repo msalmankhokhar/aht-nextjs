@@ -1,6 +1,7 @@
-import { getPackages, packagesActionResponse } from '@/actions/packages.actions'
+import { getPackages, packageInterface, packagesActionResponse } from '@/actions/packages.actions'
 import React from 'react'
 import PackageCard from '../PackageCard'
+import PackageCardSwiper from '../PackageCardSwiper';
 
 export default async function PackagesSection() {
 
@@ -18,17 +19,8 @@ export default async function PackagesSection() {
                     {/* Package Cards */}
 
                     <div className="w-full h-[80%] top-[10%] min-[835px]:h-1/2 min-[835px]:top-[25%] bg-brand-secondary absolute"></div>
-                    <div className="grid grid-cols-1 min-[835px]:grid-cols-2 min-[1235px]:grid-cols-3 justify-center max-w-[90%] mx-auto content-center flex-wrap gap-6">
-                    {
-                        packagesResponse.success ? (
-                            packagesResponse.data?.packages.filter((pkg) => pkg.rating === 5).map((pkg) => (
-                                <PackageCard key={pkg._id} {...pkg} />
-                            ))
-                        ) : (
-                            <div className="text-center text-lg text-red-500 bg-white z-[1] w-full px-5 py-6 border border-gray-200 rounded-xl">{packagesResponse.message}</div>
-                        )
-                    }
-                    </div>
+
+                    <PackageCardSwiperContainer data={packagesResponse.data?.packages.filter((pkg) => pkg.rating === 5)} />
 
                 </div>
             </div>
@@ -41,17 +33,7 @@ export default async function PackagesSection() {
 
                     <div className="w-full h-[80%] top-[10%] min-[835px]:h-1/2 min-[835px]:top-[25%] bg-brand-secondary absolute"></div>
 
-                    <div className="grid grid-cols-1 min-[835px]:grid-cols-2 min-[1235px]:grid-cols-3 justify-center max-w-[90%] mx-auto content-center flex-wrap gap-6">
-                    {
-                        packagesResponse.success ? (
-                            packagesResponse.data?.packages.filter((pkg) => pkg.rating === 4).map((pkg) => (
-                                <PackageCard key={pkg._id} {...pkg} />
-                            ))
-                        ) : (
-                            <div className="text-center text-lg text-red-500 bg-white z-[1] w-full px-5 py-6 border border-gray-200 rounded-xl">{packagesResponse.message}</div>
-                        )
-                    }
-                    </div>
+                    <PackageCardSwiperContainer data={packagesResponse.data?.packages.filter((pkg) => pkg.rating === 4)} />
 
                 </div>
             </div>
@@ -64,21 +46,29 @@ export default async function PackagesSection() {
 
                     <div className="w-full h-[80%] top-[10%] min-[835px]:h-1/2 min-[835px]:top-[25%] bg-brand-secondary absolute"></div>
 
-                    <div className="grid grid-cols-1 min-[835px]:grid-cols-2 min-[1235px]:grid-cols-3 justify-center max-w-[90%] mx-auto content-center flex-wrap gap-6">
-                    {
-                        packagesResponse.success ? (
-                            packagesResponse.data?.packages.filter((pkg) => pkg.rating === 3 && pkg.category === 'popular').map((pkg) => (
-                                <PackageCard key={pkg._id} {...pkg} />
-                            ))
-                        ) : (
-                            <div className="text-center text-lg text-red-500 bg-white z-[1] w-full px-5 py-6 border border-gray-200 rounded-xl">{packagesResponse.message}</div>
-                        )
-                    }
-                    </div>
+                    <PackageCardSwiperContainer data={packagesResponse.data?.packages.filter((pkg) => pkg.rating === 3 && pkg.category === 'popular')} />
 
                 </div>
             </div>
 
         </section>
+    )
+}
+
+export function PackageCardSwiperContainer({ data }: { data?: packageInterface[] | undefined }) {
+    return (
+        <>
+            <noscript>
+                <div className="grid grid-cols-1 min-[835px]:grid-cols-2 min-[1235px]:grid-cols-3 justify-center max-w-[90%] mx-auto content-center flex-wrap gap-6">
+                    {
+                        data?.map((pkg) => (
+                            <PackageCard key={pkg._id} {...pkg} />
+                        ))
+                    }
+                </div>
+            </noscript>
+
+            <PackageCardSwiper data={data} />
+        </>
     )
 }
