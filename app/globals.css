@@ -50,7 +50,7 @@
 
 /* Buttons */
 @utility btn {
-  @apply py-3 px-6 border-2 border-transparent font-bold rounded-lg transition-colors duration-300 flex items-center justify-center cursor-pointer
+  @apply py-3 px-6 border-2 border-transparent font-bold rounded-full transition-colors duration-300 flex items-center justify-center cursor-pointer
 }
 
 @utility btn-primary {

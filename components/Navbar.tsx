@@ -23,7 +23,7 @@ export default function Navbar({ variant = 'navbar-colored', className }: Navbar
   const logoVariant : logoVarientType = variant === 'navbar-colored' ? 'logo-white' : 'logo';
 
   return (
-    <nav className={`z-[1000] left-0 right-0 mx-5 mt-5 rounded-2xl py-2.5 pl-7 pr-7 flex items-center justify-between ${navBgClass} ${textColorClass} ${className}`}>
+    <nav className={`z-[1000] left-0 right-0 m-3 sm:m-5 rounded-2xl py-2.5 pl-7 pr-7 flex items-center justify-between ${navBgClass} ${textColorClass} ${className}`}>
       <div className="flex items-center gap-8">
         <Logo variant={logoVariant} foreGround={logoForeground} />
       </div>
