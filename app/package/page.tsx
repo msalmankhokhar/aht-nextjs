@@ -18,19 +18,19 @@ export default function PackagePage() {
                     <p className='text-sm text-gray-600'>Home - Package Details</p>
                 </div>
                 <section className='flex flex-col gap-y-7 px-cont max-w-[1100px] w-full mx-auto'>
-                    <div className='px-24 py-12 rounded-xl border border-gray-200 shadow-lg shadow-brand-secondary-200/40'>
+                    <div className='px-7 sm:px-10 md:px-24 py-12 rounded-xl border border-gray-200 shadow-lg shadow-brand-secondary-200/40'>
                         <h1 className='mb-10 text-3xl leading-none text-center text-brand-secondary/93 font-bold'>10 Nights 5 Star Umrah package</h1>
-                        <div className='flex gap-[15px]'>
-                            <div className='overflow-hidden relative rounded-xl h-[345px] w-3/4 col-span-3 row-span-2'>
+                        <div className='flex flex-col min-[707px]:flex-row gap-[15px]'>
+                            <div className='overflow-hidden relative rounded-xl flex-1 aspect-video min-[707px]:aspect-auto min-h-[200px] min-[707px]:min-h-auto'>
                                 <Image
                                     alt='package gallery image'
                                     src={'/images/packages/gallery/default/1.png'}
                                     fill
-                                    className='object-cover object-center w-auto h-auto'
+                                    className='object-cover object-center'
                                 />
                             </div>
-                            <div className='grid grid-cols-1 grid-rows-[165px_165px] w-1/4 gap-[15px]'>
-                                <div className='overflow-hidden relative rounded-xl w-full h-full'>
+                            <div className='w-full grid grid-cols-2 grid-rows-1 min-[707px]:grid-cols-1 min-[707px]:grid-rows-2 h-1/4 min-[707px]:w-1/4 gap-[15px]'>
+                                <div className='overflow-hidden aspect-square relative rounded-xl w-full h-full'>
                                     <Image
                                         alt='package gallery image'
                                         src={'/images/packages/gallery/default/2.png'}
@@ -38,7 +38,7 @@ export default function PackagePage() {
                                         className='object-cover object-center'
                                     />
                                 </div>
-                                <div className='overflow-hidden relative rounded-xl w-full h-full'>
+                                <div className='overflow-hidden aspect-square relative rounded-xl w-full h-full'>
                                     <div className='bg-[#004045]/70 absolute top-0 bottom-0 right-0 left-0 z-[1] flex justify-center items-center'>
                                         <span className='text-white font-bold text-4xl'>3+</span>
                                     </div>
@@ -52,12 +52,14 @@ export default function PackagePage() {
                             </div>
                         </div>
                     </div>
-                    <div className='p-7 rounded-xl border-2 border-gray-200'>
-                        <h1 className='mb-10 text-3xl leading-none text-brand-secondary/93 font-semibold'>Package Features</h1>
-                        <div className='flex items-center gap-10'>
 
-                            <div>
-                                <div className='mb-2.5 size-[70px] text-brand-secondary-700 rounded-full bg-[#BCDEE0] flex items-center justify-center'>
+                    {/* Package features */}
+                    <div className='px-4 py-6 sm:px-7 rounded-xl border-2 border-gray-200'>
+                        <h1 className='mb-10 text-3xl leading-none text-brand-secondary/93 font-semibold'>Package Features</h1>
+                        <div className='flex flex-wrap items-center justify-between gap-5 sm:gap-10'>
+
+                            <div className="flex flex-col items-center">
+                                <div className='mb-2.5 size-[50px] p-3 sm:p-0 sm:size-[70px] text-brand-secondary-700 rounded-full bg-[#BCDEE0] flex items-center justify-center'>
                                     <Image
                                         alt='flight icon'
                                         src={'/images/icons/png/flight.png'}
@@ -67,8 +69,8 @@ export default function PackagePage() {
                                 </div>
                                 <p className='leading-none text-center text-base font-medium text-brand-secondary'>Flights</p>
                             </div>
-                            <div>
-                                <div className='mb-2.5 size-[70px] text-brand-secondary-700 rounded-full bg-[#BCDEE0] flex items-center justify-center'>
+                            <div className="flex flex-col items-center">
+                                <div className='mb-2.5 size-[50px] p-3 sm:p-0 sm:size-[70px] text-brand-secondary-700 rounded-full bg-[#BCDEE0] flex items-center justify-center'>
                                     <Image
                                         alt='flight icon'
                                         src={'/images/icons/png/visa.png'}
@@ -78,8 +80,8 @@ export default function PackagePage() {
                                 </div>
                                 <p className='leading-none text-center text-base font-medium text-brand-secondary'>Visa</p>
                             </div>
-                            <div>
-                                <div className='mb-2.5 size-[70px] text-brand-secondary-700 rounded-full bg-[#BCDEE0] flex items-center justify-center'>
+                            <div className="flex flex-col items-center">
+                                <div className='mb-2.5 size-[50px] p-3 sm:p-0 sm:size-[70px] text-brand-secondary-700 rounded-full bg-[#BCDEE0] flex items-center justify-center'>
                                     <Image
                                         alt='flight icon'
                                         src={'/images/icons/png/transport.png'}
@@ -89,8 +91,8 @@ export default function PackagePage() {
                                 </div>
                                 <p className='leading-none text-center text-base font-medium text-brand-secondary'>Transport</p>
                             </div>
-                            <div>
-                                <div className='mb-2.5 size-[70px] text-brand-secondary-700 rounded-full bg-[#BCDEE0] flex items-center justify-center'>
+                            <div className="flex flex-col items-center">
+                                <div className='mb-2.5 size-[50px] p-3 sm:p-0 sm:size-[70px] text-brand-secondary-700 rounded-full bg-[#BCDEE0] flex items-center justify-center'>
                                     <Image
                                         alt='flight icon'
                                         src={'/images/icons/png/hotel.png'}
@@ -103,9 +105,11 @@ export default function PackagePage() {
 
                         </div>
                     </div>
+
+                    {/* Hotel details */}
                     <div>
                         <h1 className='text-brand-secondary text-4xl font-medium mb-5'>Hotel details</h1>
-                        <div className='grid grid-cols-2 gap-8'>
+                        <div className='grid grid-cols-1 min-[707px]:grid-cols-2 gap-8'>
 
                             {/* hotel cards */}
 
@@ -190,9 +194,10 @@ export default function PackagePage() {
                         </div>
                     </div>
 
+                    {/* Transfer details */}
                     <div>
                         <h1 className='text-brand-secondary text-4xl font-medium mb-5'>Transfer details</h1>
-                        <div className='grid gap-8 grid-cols-2'>
+                        <div className='grid gap-8 grid-cols-1 min-[707px]:grid-cols-2'>
 
                             {/* Transfer card */}
                             <div className='rounded-xl border-2 border-gray-100 p-4'>
@@ -261,7 +266,7 @@ export default function PackagePage() {
                                 </div>
                             </div>
 
-                            <div className='flex flex-col gap-y-3'>
+                            <div className='flex flex-col gap-y-3 px-4 min-[707px]:px-0'>
                                 <h2 className='text-2xl font-medium mb-1.5 text-brand-secondary'>Description</h2>
                                 <p className='text-base text-brand-secondary-400'>
                                     Experience the blessings and immerse yourself in the spiritual atmosphere with our Umrah package.
@@ -281,7 +286,8 @@ export default function PackagePage() {
 
                     </div>
 
-                    <div className='grid grid-cols-2 gap-8'>
+                    {/* Inclusions and Exclusions */}
+                    <div className='grid grid-cols-1 min-[707px]:grid-cols-2 gap-8'>
                         <div className='flex flex-col'>
                             <div className='flex-1 px-4 mb-3 py-7 border-2 border-gray-200 rounded-xl'>
                                 <h1 className='text-3xl font-medium text-brand-secondary mb-6'>Inclusions</h1>
@@ -308,12 +314,13 @@ export default function PackagePage() {
                         </div>
                     </div>
 
-                    <div className='p-12 rounded-xl bg-brand-secondary relative'>
+                    {/* Query form */}
+                    <div className='p-5 min-[415px]:p-7 min-[490px]:p-12 rounded-xl bg-brand-secondary relative'>
                         <BgPattern />
                         <div className='relative z-[1]'>
                             {/* Content */}
                             <div className='flex flex-col'>
-                                <div className='bg-white self-center w-1/2 p-8 rounded-xl flex flex-col'>
+                                <div className='bg-white self-stretch min-[707px]:self-center min-[1100px]:max-w-1/2 p-4 min-[415px]:p-6 min-[490px]:p-8 rounded-xl flex flex-col'>
                                     <h1 className='text-brand-secondary text-2xl font-bold mb-2 text-center'>Get Umrah Quote</h1>
                                     <p className='text-brand-secondary-800 text-base font-medium text-center'>We will contact you via whatsapp or email within a few minutes.</p>
                                     <form className='mt-10 flex flex-col'>
