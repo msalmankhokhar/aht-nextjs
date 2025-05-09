@@ -5,7 +5,7 @@ import { packageInterface } from '@/actions/packages.actions';
 
 // Import Swiper styles
 import 'swiper/css';
-import PackageCard from './PackageCard';
+import PackageCard from '../PackageCard';
 
 interface PackageCardSwiperProps {
     data?: packageInterface[]
@@ -15,6 +15,7 @@ export default function PackageCardSwiper({ data = [] }: PackageCardSwiperProps)
     return (
         <>
             <Swiper
+                className='max-w-[1200px]'
                 spaceBetween={24}
                 slidesPerView={1}
                 breakpoints={{

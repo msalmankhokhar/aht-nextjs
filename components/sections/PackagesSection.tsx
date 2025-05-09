@@ -1,7 +1,7 @@
 import { getPackages, packageInterface, packagesActionResponse } from '@/actions/packages.actions'
 import React from 'react'
 import PackageCard from '../PackageCard'
-import PackageCardSwiper from '../PackageCardSwiper';
+import PackageCardSwiper from '../swipers/PackageCardSwiper';
 
 export default async function PackagesSection() {
 

@@ -79,7 +79,7 @@
 
 /* Seo Text */
 @utility seo-text-section {
-  @apply relative overflow-y-scroll border-t border-brand-secondary-100 bg-gray-50;
+  @apply relative overflow-y-scroll border-t border-brand-secondary-100 bg-gray-50 max-w-cont;
 }
 
 /* seo text section scrollbar */
