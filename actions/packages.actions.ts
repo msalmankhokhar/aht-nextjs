@@ -1,7 +1,7 @@
 "use server";
 import { axiosClient } from "@/lib/utils";
 
-interface actionResponse {
+export interface actionResponse {
     success: boolean,
     message: string,
     data?: JSON | object,
@@ -32,7 +32,7 @@ export interface packagesActionResponse extends actionResponse {
     },
 }
 
-interface db_query_Interface {
+export interface db_query_Interface {
     category?: string,
     purpose?: string,
     price?: number,

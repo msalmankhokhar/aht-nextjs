@@ -10,7 +10,7 @@ interface PackageCardProps {
 
 export default function PackageCard({ data = defaultPackage }: PackageCardProps) {
     return (
-        <div className="z-[1] rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
+        <div className="z-[50] relative rounded-xl overflow-hidden bg-white shadow-lg shadow-brand-secondary/20">
             {/* aspect-[16/10] */}
             <div className="relative min-w-[310px] w-full h-[200px]">
                 <Image

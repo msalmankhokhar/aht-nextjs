@@ -1,6 +1,26 @@
 import React from 'react'
 import { LuCircleCheck } from 'react-icons/lu'
 import { SiTrustpilot } from 'react-icons/si'
+import ReviewCardSwiper from '../swipers/ReviewCardSwiper'
+
+export function ReviewsCardSwiperContainer() {
+    return (
+        <>
+        <noscript>
+            <div className="flex gap-7 flex-wrap justify-center">
+
+                {/* reviews */}
+
+                <ReviewsCard />
+                <ReviewsCard />
+                <ReviewsCard />
+
+            </div>
+        </noscript>
+        <ReviewCardSwiper />
+        </>
+    )
+}
 
 export function ReviewsCard() {
     return (
@@ -47,15 +67,9 @@ export default function ReviewsSection() {
                 <h2 className="text-3xl font-bold text-brand-secondary text-center mb-16">
                     Our Happy <span className="text-brand-primary mb-20">Pilgrims</span>
                 </h2>
-                <div className="flex gap-7 flex-wrap justify-center">
 
-                    {/* reviews */}
+                <ReviewsCardSwiperContainer />
 
-                    <ReviewsCard />
-                    <ReviewsCard />
-                    <ReviewsCard />
-
-                </div>
             </div>
 
             <div className="border-t border-brand-secondary-200 py-16 px-cont">
