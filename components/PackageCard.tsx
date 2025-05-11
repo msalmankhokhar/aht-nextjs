@@ -1,5 +1,6 @@
 import { packageInterface } from '@/actions/packages.actions'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { FaFlag } from 'react-icons/fa'
 import { LuPhone } from 'react-icons/lu'
@@ -40,11 +41,11 @@ export default function PackageCard({ data = defaultPackage }: PackageCardProps)
                     </div>
                 </div>
                 <div className="flex gap-2 flex-wrap">
-                    <button className="text-nowrap btn-primary text-sm flex-1 rounded-lg">View Price</button>
-                    <button className="text-nowrap btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
+                    <Link href={'/package'} className="text-nowrap btn-primary text-sm flex-1 rounded-lg">View Price</Link>
+                    <Link href={'tel:123456789'} className="text-nowrap btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
                         <LuPhone size={16} />
                         <span>Call Us</span>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

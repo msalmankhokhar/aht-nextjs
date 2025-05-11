@@ -1,7 +1,9 @@
 'use client';
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 import { packageInterface } from '@/actions/packages.actions';
+import { LuChevronLeft, LuChevronRight } from 'react-icons/lu';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,10 +13,33 @@ interface PackageCardSwiperProps {
     data?: packageInterface[]
 }
 
+// Create navigation buttons component
+function SwiperNavButtons() {
+    const swiper = useSwiper();
+    
+    return (
+        <div className="flex gap-3 items-center justify-center mt-4">
+            <button 
+                onClick={() => swiper.slidePrev()} 
+                className="cursor-pointer rounded-full size-[35px] flex items-center justify-center text-lg border border-brand-secondary-200 text-brand-secondary-400 hover:bg-brand-secondary hover:text-white transition-colors"
+            >
+                <LuChevronLeft />
+            </button>
+            <button 
+                onClick={() => swiper.slideNext()} 
+                className="cursor-pointer rounded-full size-[35px] flex items-center justify-center text-xl border border-brand-secondary-200 text-brand-secondary-400 hover:bg-brand-secondary hover:text-white transition-colors"
+            >
+                <LuChevronRight />
+            </button>
+        </div>
+    );
+}
+
 export default function PackageCardSwiper({ data = [] }: PackageCardSwiperProps) {
     return (
-        <>
+        <div>
             <Swiper
+                modules={[Navigation]}
                 className='max-w-[1200px]'
                 spaceBetween={24}
                 slidesPerView={1}
@@ -38,7 +63,8 @@ export default function PackageCardSwiper({ data = [] }: PackageCardSwiperProps)
                         <PackageCard data={pkg} />
                     </SwiperSlide>
                 ))}
+                <SwiperNavButtons />
             </Swiper>
-        </>
+        </div>
     )
 }
