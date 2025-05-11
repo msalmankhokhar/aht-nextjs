@@ -9,7 +9,7 @@ export default async function PackagesSection() {
     console.log(packagesResponse);
 
     return (
-        <section className="py-20 flex flex-col gap-y-20">
+        <section id='packages-section' className="py-20 flex flex-col gap-y-20">
 
             {/* 5 Star Packages */}
             <div>

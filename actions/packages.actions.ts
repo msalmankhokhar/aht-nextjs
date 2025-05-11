@@ -63,3 +63,44 @@ export async function getPackages({ db_query, limit }: { db_query?: db_query_Int
         };
     }
 }
+
+export async function getPackageById({ id }: { id: string }) {
+    try {
+        const response = await axiosClient.get(`/packages/${id}`, {
+            method: 'GET'
+        });
+
+        return {
+            success: true,
+            message: "Package fetched successfully",
+            data: response.data
+        };
+    } catch (error: unknown) {
+        // console.error("Error fetching package:", error);
+        return {
+            success: false,
+            message: "Error fetching package",
+            error: error instanceof Error ? error.message : "Unknown error"
+        };
+    }
+}
+
+export async function getPackageBySlug({ slug }: { slug: string }) {
+    try {
+        const response = await axiosClient.get(`/packages/slug/${slug}`, {
+            method: 'GET'
+        });
+        return {
+            success: true,
+            message: "Package fetched successfully",
+            data: response.data?.data
+        };
+    } catch (error: unknown) {
+        // console.error("Error fetching package:", error);
+        return {
+            success: false,
+            message: "Error fetching package",
+            error: error instanceof Error ? error.message : "Unknown error"
+        };
+    }
+}

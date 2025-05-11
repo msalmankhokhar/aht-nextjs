@@ -39,6 +39,7 @@ export default function HotelCardSwiper({ data }: { data?: hotelInterface[] }) {
                 className='max-w-[1200px]'
                 spaceBetween={24}
                 slidesPerView={1}
+                noSwipingSelector=".no-swipe"
                 breakpoints={{
                     640: {  // sm
                         slidesPerView: 1.5,

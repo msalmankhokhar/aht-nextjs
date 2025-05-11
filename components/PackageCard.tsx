@@ -5,6 +5,15 @@ import React from 'react'
 import { FaFlag } from 'react-icons/fa'
 import { LuPhone } from 'react-icons/lu'
 
+function titleToSlug(title: string) {
+    return title
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')   // remove special characters except hyphens
+      .replace(/\s+/g, '-')       // replace spaces with hyphens
+      .replace(/-+/g, '-');       // remove duplicate hyphens
+  }
+
 interface PackageCardProps {
     data?: packageInterface
 }
@@ -22,13 +31,13 @@ export default function PackageCard({ data = defaultPackage }: PackageCardProps)
                 />
             </div>
             <div className="py-4 px-6">
-                <h3 className="text-base text-center font-semibold pb-1.5">{data.title}</h3>
+                <h3 className="text-base text-center font-semibold pb-1.5 no-swipe">{data.title}</h3>
                 <div className="h-[2px] w-[92%] bg-yellow-500 mx-auto rounded-full"></div>
                 <div className="my-4 text-[0.8rem] flex flex-col gap-1.5">
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 no-swipe">
                         <strong className="font-medium text-brand-primary">Makkah: </strong>{data.makkahHotel.name} ({data.makkahNights}N)
                     </p>
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 no-swipe">
                         <strong className="font-medium text-brand-primary">Madinah: </strong>{data.madinahHotel.name} ({data.madinahNights}N)
                     </p>
                 </div>
@@ -41,7 +50,7 @@ export default function PackageCard({ data = defaultPackage }: PackageCardProps)
                     </div>
                 </div>
                 <div className="flex gap-2 flex-wrap">
-                    <Link href={'/package'} className="text-nowrap btn-primary text-sm flex-1 rounded-lg">View Price</Link>
+                    <Link href={`/package/${titleToSlug(data.title)}`} className="text-nowrap btn-primary text-sm flex-1 rounded-lg">View Price</Link>
                     <Link href={'tel:123456789'} className="text-nowrap btn-secondary-mixed text-sm flex-1 rounded-lg gap-2">
                         <LuPhone size={16} />
                         <span>Call Us</span>
@@ -51,7 +60,6 @@ export default function PackageCard({ data = defaultPackage }: PackageCardProps)
         </div>
     )
 }
-
 
 const defaultPackage: packageInterface = {
     "_id": "67f8bf9dc92bb12e7f8ad15a",

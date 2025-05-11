@@ -1,9 +1,17 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+// import React, { useState } from 'react'
 import { LuArrowRight } from 'react-icons/lu'
+// import Queryform from '../Queryform'
+// import Modal from '../Modal'
+import Link from 'next/link'
 
 export default function HomeHeroSection() {
+
+    // const [queryFormModalOpen, setQueryFormModalOpen] = useState(true);
+
     return (
+        <>
         <div className="px-5 sm:px-10 min-[1070px]:pl-24 min-[1070px]:pr-7 pb-24 pt-10 flex flex-col min-[1070px]:flex-row items-center justify-center">
             <div className="max-w-[660px] w-full flex flex-col">
                 <h1 className="tracking-wide leading-12 md:leading-14 mb-6 text-4xl md:text-[2.7rem] font-bold text-brand-secondary">All Inclusive Umrah Packages with Guided Tour.</h1>
@@ -11,13 +19,13 @@ export default function HomeHeroSection() {
                     Our all packages include flights, visa processing, accommodation near Haram, ground transport and a guided tour. Meals are optional.
                 </p>
                 <div className="flex gap-3 flex-wrap items-center">
-                    <button className="btn-primary text-lg self-start min-w-[220px] font-semibold space-x-3">
+                    <Link href={'#query-form-section'} className="btn-primary text-lg self-start min-w-[220px] font-semibold space-x-3">
                         <span>Get Quote</span>
                         <LuArrowRight />
-                    </button>
-                    <button className="btn-secondary-white text-lg border border-brand-secondary-200 min-w-[220px] font-semibold space-x-3">
+                    </Link>
+                    <Link href={'#packages-section'} className="btn-secondary-white text-lg border border-brand-secondary-200 min-w-[220px] font-semibold space-x-3">
                         <span>Explore Umrah Packages</span>
-                    </button>
+                    </Link>
                 </div>
             </div>
             <Image
@@ -25,7 +33,16 @@ export default function HomeHeroSection() {
                 src={'/images/hero/hero_group.png'}
                 width={450}
                 height={450}
-            />
+                />
         </div>
+
+        {/* <Modal
+            open={queryFormModalOpen}
+            onClose={() => setQueryFormModalOpen(false)}
+        >
+            <Queryform modal />
+        </Modal> */}
+
+        </>
     )
 }

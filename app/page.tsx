@@ -7,6 +7,7 @@ import FaqsSection from "@/components/sections/FaqsSection";
 import HomeHeroSection from "@/components/sections/HomeHeroSection";
 import PackagesSection from "@/components/sections/PackagesSection";
 import PartnersSection from "@/components/sections/PartnersSection";
+import QueryFormSection from "@/components/sections/QueryFormSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import SeoTextSection from "@/components/sections/SeoTextSection";
 import WhatsIncludedSection from "@/components/sections/WhatsIncludedSection";
@@ -35,6 +36,10 @@ export default function Home() {
 
         {/* Packages Section */}
         <PackagesSection />
+
+        <div className="container mx-auto">
+          <QueryFormSection />
+        </div>
 
         <SeoTextSection height={330}>
           <h2>Umrah Packages: Experience a Spiritually Rewarding Umrah Journey</h2>
