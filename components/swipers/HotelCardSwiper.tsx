@@ -33,7 +33,7 @@ function SwiperNavButtons() {
 
 export default function HotelCardSwiper({ data }: { data?: hotelInterface[] }) {
     return (
-        <div>
+        <div className='w-full'>
             <Swiper
                 modules={[Navigation]}
                 className='max-w-[1200px]'

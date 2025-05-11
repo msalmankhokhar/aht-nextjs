@@ -37,7 +37,7 @@ function SwiperNavButtons() {
 
 export default function PackageCardSwiper({ data = [] }: PackageCardSwiperProps) {
     return (
-        <div>
+        <div className='w-full'>
             <Swiper
                 modules={[Navigation]}
                 className='max-w-[1200px]'

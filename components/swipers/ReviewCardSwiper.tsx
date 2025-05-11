@@ -32,7 +32,7 @@ function SwiperNavButtons() {
 
 export default function ReviewCardSwiper() {
     return (
-        <div>
+        <div className='w-full'>
             <Swiper
                 modules={[Navigation]}
                 className='max-w-[1200px]'
