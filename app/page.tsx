@@ -25,16 +25,12 @@ export default function Home() {
     <>
 
       <Navbar variant="navbar-colored" />
-
-      {/* Hero Section */}
       <HomeHeroSection />
 
       <main>
 
-        {/* Whats included in your Package */}
         <WhatsIncludedSection />
 
-        {/* Packages Section */}
         <PackagesSection />
 
         <div className="container mx-auto">
@@ -56,7 +52,6 @@ export default function Home() {
           </div>
         </SeoTextSection>
 
-        {/* Booking Process Section */}
         <BookingProcessSection />
 
         {/* Umrah Package Types Offered by Al Habib Travel */}
@@ -91,7 +86,6 @@ export default function Home() {
           </div>
         </SeoTextSection>
 
-        {/* Our Accomodation */}
         <AccomodationSection />
 
         {/* Why choose Al Habib Travel for Umrah? */}
@@ -159,7 +153,6 @@ export default function Home() {
           </div>
         </SeoTextSection>
 
-        {/* Why Al Habib Travel Section */}
         <WhyAlHabibSection />
 
         {/* The Significance of Umrah in Islam */}
@@ -223,7 +216,6 @@ export default function Home() {
         {/* Economy Packages Section */}
         <EconomyPackagesSection />
 
-        {/* Reviews Sections */}
         <ReviewsSection />
 
         {/* Consideration of Senior Citizens, Kids, & Disabled Persons Needs */}
@@ -240,7 +232,6 @@ export default function Home() {
           </p>
         </SeoTextSection>
 
-        {/* Our Partners Section */}
         <PartnersSection />
 
         {/* Plan your Umrah with Al-Habib Travels Now! */}
