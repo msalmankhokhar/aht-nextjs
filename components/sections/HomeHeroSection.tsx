@@ -1,14 +1,9 @@
 'use client'
 import Image from 'next/image'
-import React, { useState } from 'react'
 import { LuArrowRight } from 'react-icons/lu'
-import Queryform from '../Queryform'
-import Modal from '../Modal'
 import Link from 'next/link'
 
 export default function HomeHeroSection() {
-
-    const [queryFormModalOpen, setQueryFormModalOpen] = useState(false);
 
     return (
         <>
@@ -19,13 +14,13 @@ export default function HomeHeroSection() {
                     Our all packages include flights, visa processing, accommodation near Haram, ground transport and a guided tour. Meals are optional.
                 </p>
                 <div className="flex gap-3 flex-wrap items-center">
-                    <button 
-                        onClick={() => setQueryFormModalOpen(true)} 
+                    <Link
                         className="btn-primary text-lg self-start min-w-[220px] font-semibold space-x-3"
+                        href={'#query-form-section'}
                     >
                         <span>Get Quote</span>
                         <LuArrowRight />
-                    </button>
+                    </Link>
                     <Link href={'#packages-section'} className="btn-secondary-white text-lg border border-brand-secondary-200 min-w-[220px] font-semibold space-x-3">
                         <span>Explore Umrah Packages</span>
                     </Link>
@@ -38,13 +33,6 @@ export default function HomeHeroSection() {
                 height={450}
                 />
         </div>
-
-        <Modal
-            open={queryFormModalOpen}
-            onClose={() => setQueryFormModalOpen(false)}
-        >
-            <Queryform modal onClose={() => setQueryFormModalOpen(false)} />
-        </Modal>
 
         </>
     )
