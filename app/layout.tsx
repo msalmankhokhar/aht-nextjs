@@ -1,5 +1,6 @@
 import { DM_Sans as Font } from "next/font/google";
 import "./globals.css";
+import NextTopLoader from "nextjs-toploader";
 
 const font = Font({
   subsets: ['latin'],
@@ -16,6 +17,10 @@ export default function RootLayout({
       <body
         className={`${font.className} antialiased`}
       >
+        <NextTopLoader
+          color="#D4A10F"
+          showSpinner={false}
+        />
         {children}
       </body>
     </html>

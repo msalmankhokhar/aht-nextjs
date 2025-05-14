@@ -6,22 +6,22 @@ import { LuChevronLeft, LuChevronRight } from 'react-icons/lu';
 
 // Import Swiper styles
 import 'swiper/css';
-import { ReviewsCard } from '../sections/ReviewsSection';
+import { ReviewsCard, ReviewsCardProps } from '../sections/ReviewsSection';
 
 // Create navigation buttons component
 function SwiperNavButtons() {
     const swiper = useSwiper();
-    
+
     return (
         <div className="flex gap-5 items-center justify-center mt-4">
-            <button 
-                onClick={() => swiper.slidePrev()} 
+            <button
+                onClick={() => swiper.slidePrev()}
                 className="cursor-pointer rounded-full size-[35px] flex items-center justify-center text-lg border border-brand-secondary-200 text-brand-secondary-400 hover:bg-brand-secondary hover:text-white transition-colors"
             >
                 <LuChevronLeft />
             </button>
-            <button 
-                onClick={() => swiper.slideNext()} 
+            <button
+                onClick={() => swiper.slideNext()}
                 className="cursor-pointer rounded-full size-[35px] flex items-center justify-center text-xl border border-brand-secondary-200 text-brand-secondary-400 hover:bg-brand-secondary hover:text-white transition-colors"
             >
                 <LuChevronRight />
@@ -30,7 +30,7 @@ function SwiperNavButtons() {
     );
 }
 
-export default function ReviewCardSwiper() {
+export default function ReviewCardSwiper({ data }: { data?: ReviewsCardProps[] }) {
     return (
         <div className='w-full'>
             <Swiper
@@ -53,16 +53,28 @@ export default function ReviewCardSwiper() {
                     },
                 }}
             >
-                <SwiperSlide className='pb-5'>
-                    <ReviewsCard />
-                </SwiperSlide>
-                <SwiperSlide className='pb-5'>
-                    <ReviewsCard />
-                </SwiperSlide>
-                <SwiperSlide className='pb-5'>
-                    <ReviewsCard />
-                </SwiperSlide>
-                
+                {
+                    data ? (
+                        data.map((item, index) => (
+                            <SwiperSlide key={index} className='pb-5'>
+                                <ReviewsCard {...item} />
+                            </SwiperSlide>
+                        ))
+                    ) : (
+                        <>
+                            <SwiperSlide className='pb-5'>
+                                <ReviewsCard />
+                            </SwiperSlide>
+                            <SwiperSlide className='pb-5'>
+                                <ReviewsCard />
+                            </SwiperSlide>
+                            <SwiperSlide className='pb-5'>
+                                <ReviewsCard />
+                            </SwiperSlide>
+                        </>
+                    )
+                }
+
                 <SwiperNavButtons />
             </Swiper>
         </div>
