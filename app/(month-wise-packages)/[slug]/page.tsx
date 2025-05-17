@@ -161,13 +161,13 @@ export default async function Page() {
               customised spending based on your specific requirements. Spiritual
               feeling experience through the Umrah in packages for December
               2025, and from there, Al Habib Travel will become your trusted
-              partner in this sacred journey. 
+              partner in this sacred journey.
             </p>
           </div>
         </SeoTextSection>
         <SeoTextSection height={230}>
           <div>
-            <h2>What's included in your package?</h2>
+            <h2>What&apos;s included in your package?</h2>
             <p>
               Choosing the right Umrah package for December 2025 is critical for
               a fulfilling pilgrimage. Al Habib Travel offers three major
