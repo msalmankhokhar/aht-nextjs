@@ -1,10 +1,11 @@
 import { DM_Sans as Font } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
+import FloatingWhatsappBtn from "@/components/FloatingWhatsappBtn";
 
 const font = Font({
   subsets: ['latin'],
-  weight: [ '300', '400', '500', '600', '700', '800' ]
+  weight: ['300', '400', '500', '600', '700', '800']
 })
 
 export default function RootLayout({
@@ -22,6 +23,7 @@ export default function RootLayout({
           showSpinner={false}
         />
         {children}
+        <FloatingWhatsappBtn />
       </body>
     </html>
   );
