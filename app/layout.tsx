@@ -2,6 +2,7 @@ import { DM_Sans as Font } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import FloatingWhatsappBtn from "@/components/FloatingWhatsappBtn";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const font = Font({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({
         />
         {children}
         <FloatingWhatsappBtn />
+        <GoogleTagManager gtmId="GTM-KCD699JD" />
       </body>
     </html>
   );
