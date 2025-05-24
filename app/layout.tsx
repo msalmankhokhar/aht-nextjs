@@ -24,7 +24,7 @@ export default function RootLayout({
           showSpinner={false}
         />
         {children}
-        <FloatingWhatsappBtn />
+        <FloatingWhatsappBtn  />
         <GoogleTagManager gtmId="GTM-KCD699JD" />
       </body>
     </html>
